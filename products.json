@@ -1,0 +1,16 @@
+[
+    {
+        "title": "Wireless Bluetooth Headphones",
+        "description": "High-quality sound, noise cancellation, and 20-hour battery life.",
+        "image": "images/headphones.jpg",
+        "amazon_link": "https://www.amazon.in/dp/B07PGL2ZSL?tag=YOURAFFID",
+        "youtube_link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+        "title": "Smart Fitness Band",
+        "description": "Track your fitness, heart rate, and sleep patterns with this smart band.",
+        "image": "images/fitnessband.jpg",
+        "amazon_link": "https://www.amazon.in/dp/B08N5WRWNW?tag=YOURAFFID",
+        "youtube_link": ""
+    }
+]

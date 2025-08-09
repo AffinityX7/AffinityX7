@@ -6,119 +6,103 @@ body {
     transition: background 0.5s ease, color 0.5s ease;
 }
 
-/* Light theme */
+/* Light Theme */
 body.light-theme {
-    background: linear-gradient(135deg, #fdfdfd, #e8ebf0);
-    color: #111;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    color: #000;
 }
 
-/* Dark theme */
+/* Dark Theme */
 body.dark-theme {
-    background: linear-gradient(135deg, #0d0d0d, #1c1c1c);
+    background: linear-gradient(135deg, #000000, #1a1a1a);
     color: #fff;
 }
 
-/* Header */
+/* Title */
 h1 {
     text-align: center;
-    padding: 20px 0;
+    margin: 20px 0;
 }
 
 /* Theme toggle button */
 button {
     display: block;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 20px;
     padding: 10px 20px;
     border: none;
-    border-radius: 12px;
-    font-weight: bold;
+    border-radius: 20px;
     cursor: pointer;
-    transition: background 0.4s ease, color 0.4s ease, transform 0.2s ease;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Button styles for light theme */
 body.light-theme button {
-    background: #000;
+    background: black;
     color: white;
 }
 
-/* Button styles for dark theme */
 body.dark-theme button {
-    background: #fff;
+    background: white;
     color: black;
 }
 
-/* Card container */
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-/* Product card with glassmorphism */
-.card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+/* Product cards - Glassmorphism style */
+.product-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: 20px;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    transition: transform 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px;
 }
 
-/* Card hover effect */
-.card:hover {
+body.light-theme .product-card {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.product-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
-/* Images */
-.card img {
-    max-width: 100%;
+/* Product image */
+.product-card img {
+    width: 100%;
     border-radius: 15px;
 }
 
-/* Titles */
-.card h2 {
-    font-size: 1.2rem;
-    margin: 10px 0;
-}
-
-/* Descriptions */
-.card p {
-    font-size: 0.95rem;
-    margin-bottom: 15px;
-}
-
-/* Amazon button inside cards */
-.card a {
+/* Buy button */
+.buy-button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 8px 15px;
     border-radius: 12px;
+    font-size: 14px;
     text-decoration: none;
     font-weight: bold;
-    transition: background 0.4s ease, color 0.4s ease;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Amazon button in light theme */
-body.light-theme .card a {
-    background: #000;
-    color: #fff;
+body.light-theme .buy-button {
+    background: black;
+    color: white;
 }
 
-/* Amazon button in dark theme */
-body.dark-theme .card a {
-    background: #fff;
-    color: #000;
+body.dark-theme .buy-button {
+    background: white;
+    color: black;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
+.buy-button:hover {
     opacity: 0.8;
-    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .products {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 }
